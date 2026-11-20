@@ -1,0 +1,342 @@
+
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #252b48;
+    transition: 0.3s;
+}
+
+/* Navigation */
+
+header {
+    background: #202744;
+    padding: 18px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #a5b4fc;
+}
+
+#themeBtn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(
+        135deg, #e0e7ff, #f5f6fa
+    );
+}
+
+.profile-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px #999;
+}
+
+.hero h1 {
+    margin: 20px 0;
+    font-size: 38px;
+}
+
+.hero h1 span {
+    color: #6256c9;
+}
+
+.hero h3 {
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 600px;
+    line-height: 1.7;
+    margin: auto auto 25px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background: #6256c9;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #44379e;
+}
+
+/* Common Sections */
+
+.section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+    color: #6256c9;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+/* Education Table */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #6256c9;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #eef0ff;
+}
+
+/* Skills */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(180px, 1fr)
+    );
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #ddd;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+}
+
+.skill-card h3 {
+    color: #6256c9;
+    margin-bottom: 10px;
+}
+
+/* Projects */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(240px, 1fr)
+    );
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #ddd;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+.project-card h3 {
+    color: #6256c9;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.project-card span {
+    color: #6256c9;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Contact */
+
+.contact-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+form textarea {
+    min-height: 120px;
+}
+
+#response {
+    margin: 15px 0;
+    color: green;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: #6256c9;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    background: #202744;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Dark Mode */
+
+body.dark-mode {
+    background: #151827;
+    color: #f1f1f1;
+}
+
+.dark-mode .section {
+    background: #151827;
+}
+
+.dark-mode .skill-card,
+.dark-mode .project-card,
+.dark-mode table {
+    background: #252b40;
+    color: white;
+}
+
+.dark-mode tr:nth-child(even) {
+    background: #303750;
+}
+
+.dark-mode .hero {
+    background: linear-gradient(
+        135deg, #252b40, #151827
+    );
+}
+
+.dark-mode .about-content {
+    color: #eee;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
